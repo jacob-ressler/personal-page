@@ -4,6 +4,7 @@
 
 * {
 	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -22,6 +23,10 @@ a {
 	text-decoration: none;
 	color: white;
 	
+}
+
+i {
+	padding: 5px;
 }
 
 .secondary {
@@ -67,8 +72,8 @@ a {
 		color 500ms ease,
 		background-color 500ms ease,
 		border-bottom 500ms ease;
-	padding: 1rem 0px;
-	padding-top: 21px;
+	padding: 10px 0px;
+	padding-top: 15px;
 	
 }
 
@@ -79,48 +84,54 @@ a {
 }
 
 .section-header {
-	padding-top: 1rem;
+	padding-top: 3rem;
 	text-transform: uppercase;
 }
 
 .project-container {
-	padding: 1rem;
+	padding-top: 1rem;
 	display: flex;
 	flex-flow: wrap;
 	flex-direction: row;
 	justify-content: center;
-	background-color: #4a4a4a;
+	align-content: space-around;
+	
+}
+
+.project-item-wrapper {
+	padding: 10px 0px;
 }
 
 .project-item {
-	padding:0.5rem;
+	max-width: 500px;
+	border: 5px var(--secondary) solid;
+	background-color: var(--secondary);
 	display: grid;
-	background-color: #333;
-	grid-template-areas: 
-	""
+	
+	grid-template-rows: 1fr 4rem 4rem;
+	grid-gap: 5px;
+	height: auto;
 }
 
 .project-item > img {
 	width:100%;
-	padding-bottom: .5rem;
+	height: auto;
 }
 
-.btn-container {
+
+
+.project-item > a {
 	display: flex;
-	flex-flow: row;
-	flex-direction: row;
-	justify-content: space-evenly;
-}
-
-.btn {
-	padding: 1rem 2rem;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
 	background-color: #4a4a4a;
 	transition: 
 		background-color 500ms ease,
 		color 500ms ease;
 }
 
-.btn:hover {
+.project-item > a:hover {
 	background-color: #111;
 	color: var(--secondary);
 }
