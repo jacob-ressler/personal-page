@@ -65,7 +65,8 @@ a {
 	text-align: center;
 	transition: 
 		color 500ms ease,
-		background-color 500ms ease;
+		background-color 500ms ease,
+		border-bottom 500ms ease;
 	padding: 1rem 0px;
 	padding-top: 21px;
 	
