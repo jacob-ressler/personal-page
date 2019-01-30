@@ -1,137 +1,150 @@
 :root {
-	--secondary: #e69b10;
+  --secondary: #e69b10;
+  --project-item-width: 500px;
 }
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 1rem;
-	background-color: #333;
-	color: white;
-	
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
 }
 
 main {
-	padding: 0 5%;
+  padding: 0 5%;
 }
 
 a {
-	text-decoration: none;
-	color: white;
-	
+  text-decoration: none;
+  color: white;
 }
 
 i {
-	padding: 5px;
+  padding: 5px;
 }
 
 .secondary {
-	color: var(--secondary);
+  color: var(--secondary);
 }
 
 .hero-image {
-	background-image: url("../img/hero.jpeg");
-	background-size: cover;
-	position: relative;
-	height: 50vh;
-	
+  background-image: url("../img/hero.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 50vh;
 }
 
 .hero-text {
-	font-size: 2.2rem;
-	position: absolute;
-	text-align: center;
-	top: 50%;
-	left: 50%;
-	color: #333;
-	transform: translate(-50%, -50%);
+  font-size: 2.2rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  color: #333;
+  transform: translate(-50%, -50%);
 }
 
 .navbar {
-	display: flex;
-	position: sticky;
-	top: 0px; /* stick to top of screen */
-	width: 100%;
-	justify-content: space-evenly;
-	background-color: #4a4a4a;
-	border-bottom: 5px;
-	border-bottom-color: var(--dark-secondary);
+  display: flex;
+  position: sticky;
+  top: 0px; /* stick to top of screen */
+  width: 100%;
+  justify-content: space-evenly;
+  background-color: #4a4a4a;
+  border-bottom: 5px;
+  border-bottom-color: var(--dark-secondary);
 }
 
 .navbar a {
-	text-transform: uppercase;
-	border-bottom: 5px #4a4a4a solid;
-	color: white;
-	width: 100%;
-	text-align: center;
-	transition: 
-		color 500ms ease,
-		background-color 500ms ease,
-		border-bottom 500ms ease;
-	padding: 10px 0px;
-	padding-top: 15px;
-	
+  text-transform: uppercase;
+  border-bottom: 5px #4a4a4a solid;
+  color: white;
+  width: 100%;
+  text-align: center;
+  transition: color 500ms ease, background-color 500ms ease,
+    border-bottom 500ms ease;
+  padding: 10px 0px;
+  padding-top: 15px;
 }
 
 .navbar a:hover {
-	color: var(--secondary);
-	background-color: #111;
-	border-bottom: 5px var(--secondary) solid;
+  color: var(--secondary);
+  background-color: #111;
+  border-bottom: 5px var(--secondary) solid;
 }
 
 .section-header {
-	padding-top: 3rem;
-	text-transform: uppercase;
+  padding-top: 3rem;
+  text-transform: uppercase;
 }
 
 .project-container {
-	padding-top: 1rem;
-	display: flex;
-	flex-flow: wrap;
-	flex-direction: row;
-	justify-content: center;
-	align-content: space-around;
-	
+  padding-top: 1rem;
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-around;
 }
 
-.project-item-wrapper {
-	padding: 10px 0px;
+.project-container .project-item-wrapper {
+  padding: 20px 0px;
 }
 
-.project-item {
-	max-width: 500px;
-	border: 5px var(--secondary) solid;
-	background-color: var(--secondary);
-	display: grid;
-	
-	grid-template-rows: 1fr 4rem 4rem;
-	grid-gap: 5px;
-	height: auto;
+.project-item-wrapper .project-item {
+  max-width: 500px;
+  border: 5px var(--secondary) solid;
+  background-color: var(--secondary);
+  display: grid;
+
+  grid-template-rows: 1fr 4rem 4rem;
+  grid-gap: 5px;
+  height: auto;
 }
 
 .project-item > img {
-	width:100%;
-	height: auto;
+  width: 100%;
+  height: auto;
 }
 
-
-
-.project-item > a {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.5rem;
-	background-color: #4a4a4a;
-	transition: 
-		background-color 500ms ease,
-		color 500ms ease;
+.project-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  background-color: #4a4a4a;
+  transition: background-color 500ms ease, color 500ms ease;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-.project-item > a:hover {
-	background-color: #111;
-	color: var(--secondary);
+.project-item a i {
+  font-weight: 100;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.project-item a:hover {
+  background-color: #111;
+  color: var(--secondary);
+}
+
+@media screen and (min-width: 850px) {
+  .hero-image {
+    height: 100vh;
+  }
+
+  .project-container .project-item-wrapper {
+    padding: 20px;
+  }
+
+  .project-item-wrapper .project-item {
+    max-width: 350px;
+  }
 }
