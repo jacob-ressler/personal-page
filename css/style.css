@@ -108,9 +108,58 @@ i {
   height: auto;
 }
 
-.project-item > img {
+.thumb-container {
+  position: relative;
+  width: 100%;
+}
+
+.thumb-img {
+  display: block;
   width: 100%;
   height: auto;
+}
+
+.thumb-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: black;
+  transition: opacity 500ms ease;
+}
+
+.thumb-container:hover .thumb-overlay {
+  opacity: 0.7;
+}
+
+.thumb-text {
+  padding: 5%;
+}
+
+.lang-icon {
+  position: absolute;
+  width: 15%;
+  height: auto;
+  left: 75%;
+}
+
+.title {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+  padding-top: 3px;
+}
+
+.lang {
+  font-size: 1.2rem;
+}
+
+.desc {
+  padding-top: 3rem;
+  font-size: 1rem;
 }
 
 .project-item a {
