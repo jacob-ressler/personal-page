@@ -155,10 +155,10 @@ i {
 
 .lang {
   font-size: 1.2rem;
+  padding-bottom: 3rem;
 }
 
 .desc {
-  padding-top: 3rem;
   font-size: 1rem;
 }
 
@@ -184,6 +184,7 @@ i {
   color: var(--secondary);
 }
 
+/* Large screens and Desktop */
 @media screen and (min-width: 850px) {
   .hero-image {
     height: 100vh;
@@ -195,5 +196,23 @@ i {
 
   .project-item-wrapper .project-item {
     max-width: 350px;
+  }
+
+  .lang-icon {
+    width: 17%;
+  }
+
+  .title {
+    font-size: 1.4rem;
+    padding-bottom: 5px;
+  }
+
+  .lang {
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+  }
+
+  .desc {
+    font-size: 0.9rem;
   }
 }
