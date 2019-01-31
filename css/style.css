@@ -1,6 +1,5 @@
 :root {
   --secondary: #e69b10;
-  --project-item-width: 500px;
 }
 
 * {
@@ -53,6 +52,7 @@ i {
 .navbar {
   display: flex;
   position: sticky;
+  z-index: 1;
   top: 0px; /* stick to top of screen */
   width: 100%;
   justify-content: space-evenly;
@@ -117,6 +117,8 @@ i {
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
+  object-position: center;
 }
 
 .thumb-overlay {
@@ -128,12 +130,12 @@ i {
   height: 100%;
   width: 100%;
   opacity: 0;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.75);
   transition: opacity 500ms ease;
 }
 
 .thumb-container:hover .thumb-overlay {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .thumb-text {
@@ -142,24 +144,24 @@ i {
 
 .lang-icon {
   position: absolute;
-  width: 15%;
+  width: 17%;
   height: auto;
   left: 75%;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   padding-bottom: 0.5rem;
   padding-top: 3px;
 }
 
 .lang {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding-bottom: 3rem;
 }
 
 .desc {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .project-item a {
@@ -174,7 +176,7 @@ i {
 }
 
 .project-item a i {
-  font-weight: 100;
+  font-weight: normal;
   font-size: 2rem;
   padding: 1rem;
 }
@@ -185,9 +187,13 @@ i {
 }
 
 /* Large screens and Desktop */
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 890px) {
   .hero-image {
     height: 100vh;
+  }
+
+  .project-container {
+    justify-content: flex-start;
   }
 
   .project-container .project-item-wrapper {
