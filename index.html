@@ -8,13 +8,27 @@
       integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
       crossorigin="anonymous"
     />
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Personal Page | Jacob Ressler</title>
   </head>
 
-  <body>
+  <body onload="startTimer()">
+
+
+    <script id="popup">
+      function startTimer() {
+        setTimeout(function() {
+          // code for popup here
+          if (confirm("Would you like to send me a message?"))
+            location.href = location.origin + '#contact';
+        }, 5000);
+      }
+    </script>
+
+
     <!-- HERO IMAGE AND TEXT -->
     <div id="home" class="hero-image">
       <h1 class="hero-text">Lorem ipsum dolor sit amet.</h1>
@@ -204,5 +218,6 @@
         </div>
       </div>
     </main>
+
   </body>
 </html>
