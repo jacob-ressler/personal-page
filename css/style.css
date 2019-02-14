@@ -290,6 +290,7 @@ textarea:focus {
 .contact-container textarea {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   width: 100%;
+  resize: vertical;
   height: 6rem;
   margin-bottom: 1rem;
   padding: 5px;
