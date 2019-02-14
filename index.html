@@ -9,7 +9,7 @@
       integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
       crossorigin="anonymous"
     />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -25,7 +25,7 @@
     -->
     <script id="popup">
       function startTimer() {
-        if (document.cookie != "" && false) return;
+        if (document.cookie != "") return;
         else {
           // this is the first time this user has visited the page, so set a cookie
           let d = new Date();
@@ -63,29 +63,57 @@
       <a class="share-icon">
         <i class="fas fa-share"></i>
       </a>
-      <a href="" class="share-link" id="facebook-share" target="_blank">
+      <a
+        href="http://www.facebook.com/sharer.php?u={$}"
+        class="share-link"
+        id="facebook-share"
+        target="_blank"
+      >
         <i class="fab fa-facebook"></i>
       </a>
-      <a href="" class="share-link" id="twitter-share" target="_blank">
+      <a
+        href="https://twitter.com/share?url={$}&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons"
+        class="share-link"
+        id="twitter-share"
+        target="_blank"
+      >
         <i class="fab fa-twitter"></i>
       </a>
-      <a href="" class="share-link" id="pinterest-share" target="_blank">
+      <a
+        href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"
+        class="share-link"
+        id="pinterest-share"
+        target="_blank"
+      >
         <i class="fab fa-pinterest"></i>
       </a>
-      <a href="" class="share-link" id="linkedin-share" target="_blank">
+      <a
+        href="http://www.linkedin.com/shareArticle?mini=true&amp;url={$}"
+        class="share-link"
+        id="linkedin-share"
+        target="_blank"
+      >
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="" class="share-link" id="reddit-share" target="_blank">
+      <a
+        href="http://reddit.com/submit?url={$}&amp;title=Cool Personal Webpage"
+        class="share-link"
+        id="reddit-share"
+        target="_blank"
+      >
         <i class="fab fa-reddit-alien"></i>
       </a>
       <a
-        href="mailto:?Subject=Cool Personal Webpage&amp;Body=Check out this cool page I found: https://jacob-ressler.github.io/personal-page"
+        href="mailto:?Subject=Cool Personal Webpage&amp;Body=Check out this cool page I found:\n{$}"
         class="share-link"
         id="email-share"
         target=""
       >
         <i class="fas fa-envelope"></i>
       </a>
+      <script src="js/sharebar.js">
+        
+      </script>
     </div>
 
     <!-- NAVIGATION BAR -->
