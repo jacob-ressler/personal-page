@@ -1,98 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
 
-<head>
-	<link rel="stylesheet" href="css/style.css">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Personal Page | Jacob Ressler</title>
-</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Personal Page | Jacob Ressler</title>
+  </head>
 
-<body>
-	
-	<!-- HERO IMAGE AND TEXT -->
-	<div id="home" class="hero-image">
-		<h1 class="hero-text">
-			Lorem ipsum dolor sit amet.
-		</h1>
-	</div>
+  <body onload="startTimer()">
+    <!-- POPUP SCRIPT -->
+    <script id="popup">
+      function startTimer() {
+        if (document.cookie != "") return;
+        else {
+          // this is the first time this user has visited the page
+          let d = new Date();
+          d.setTime(d.getTime() + 10 * 24 * 60 * 60 * 1000);
+          document.cookie = "expires=" + d.toUTCString() + "path=/";
 
-	<!-- NAVIGATION BAR -->
-	<div class="navbar">
-		<a href="#home">Home</a>
-		<a href="#about">About Me</a>
-		<a href="#work">My Work</a>
-		<a href="#contact">Contact Me</a>
-	</div>
+          setTimeout(function() {
+            // code for popup here
+            if (
+              confirm(
+                "Need to send me a message?\n" +
+                  "Press OK to head to my contact form."
+              )
+            )
+              location.href = location.origin + "#contact";
+          }, 5000);
+        }
+      }
+    </script>
 
-	<main>
-		<!-- ABOUT ME -->
-		<div id="about" class="about">
-			<h2 class="section-header">
-				<span class="secondary">About</span> 
-				Me...
-			</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eos consequatur, commodi maxime ipsam dolorum voluptatibus, sed facilis aut rem quidem magnam, perferendis laborum in veritatis! Eum similique iure sit blanditiis sequi debitis quod quidem nobis dignissimos maiores nostrum consectetur itaque repellat, qui enim esse voluptatibus eveniet? Magni, sapiente esse!
-			</p>
-		</div>
+    <!-- HERO IMAGE AND TEXT -->
+    <div id="home" class="hero-image">
+      <h1 class="hero-text">Lorem ipsum dolor sit amet.</h1>
+    </div>
 
-		<!-- MY WORK -->
-		<div id="work" class="work">
-			<h2 class="section-header">
-				<span class="secondary">My</span> 
-				Work...
-			</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum dolor nihil nulla, ullam sit voluptatum eius obcaecati voluptas saepe! Pariatur.
-			</p>
-		</div>
+    <!-- SHARE SIDEBAR -->
+    <div class="share-bar">
+      <a class="share-icon">
+        <i class="fas fa-share"></i>
+      </a>
+      <a href="" class="share-link" id="facebook-share" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="" class="share-link" id="twitter-share" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="share-link" id="pinterest-share" target="_blank">
+        <i class="fab fa-pinterest"></i>
+      </a>
+      <a href="" class="share-link" id="linkedin-share" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="share-link" id="reddit-share" target="_blank">
+        <i class="fab fa-reddit-alien"></i>
+      </a>
+      <a href="" class="share-link" id="email-share" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
 
-		<!-- Links (tiles) to projects? -->
-		<div class="project-container">
-			<div class="project-item">
-				<img src="img/hero.jpeg" alt="">
-				<div class="btn-container">
-					<a href="" class="btn">GitHub</a>
-					<a href="" class="btn">Download</a>
-				</div>
-			</div>
-			<div class="project-item">
-					<img src="" alt="">
-					<p>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, numquam?
-					</p>
-			</div>
-			<div class="project-item">
-					<img src="" alt="">
-					<p>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, numquam?
-					</p>
-			</div>
-		</div>
+    <!-- NAVIGATION BAR -->
+    <div class="navbar">
+      <a href="#home">Home</a> <a href="#about">About Me</a>
+      <a href="#work">My Work</a> <a href="#contact">Contact</a>
+    </div>
 
-		<!-- CONTACT ME -->
-		<div id="contact" class="contact">
-			<h2 class="section-header">
-				<span class="secondary">Contact</span>
-				Me...
-			</h2>
-			<div class="contact-container">
-				<div class="contact-item">
-					Email
-				</div>
-				<div class="contact-item">
-					Phone
-				</div>
-				<div class="contact-item">
-					LinkedIn
-				</div>
-			</div>
-		</div>
-	</main>
-</div>
+    <main>
+      <!-- ABOUT ME -->
+      <div id="about" class="about">
+        <h2 class="section-header">
+          <span class="secondary">About</span> Me...
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eos
+          consequatur, commodi maxime ipsam dolorum voluptatibus, sed facilis
+          aut rem quidem magnam, perferendis laborum in veritatis! Eum similique
+          iure sit blanditiis sequi debitis quod quidem nobis dignissimos
+          maiores nostrum consectetur itaque repellat, qui enim esse
+          voluptatibus eveniet? Magni, sapiente esse!
+        </p>
+      </div>
 
-</body>
+      <!-- MY WORK -->
+      <div id="work" class="work">
+        <h2 class="section-header">
+          <span class="secondary">My</span> Work...
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum
+          dolor nihil nulla, ullam sit voluptatum eius obcaecati voluptas saepe!
+          Pariatur.
+        </p>
+      </div>
 
+      <!-- Links (tiles) to projects? -->
+      <div class="project-container">
+        <!-- Item 1 -->
+        <div class="project-item-wrapper">
+          <div class="project-item">
+            <div class="thumb-container">
+              <!-- NOTE: All images used as thumbnails should be 16:10 aspect ratio -->
+              <img class="thumb-img" src="img/chaturanga.jpeg" alt="" />
+              <div class="thumb-overlay">
+                <div class="thumb-text">
+                  <img src="/img/unity-logo.png" alt="" class="lang-icon" />
+                  <h3 class="title">Chaturanga</h3>
+                  <p class="lang">Developed with Unity</p>
+                  <p class="desc">
+                    A four-player variant of chess made for Android. I was
+                    introduced to the game by one of my high school wrestling
+                    teammates. This was my first Unity project, so while the
+                    game may be far from perfect, I'm generally pleased with the
+                    result.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a> <i class="fab fa-github"></i> View on GitHub </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.Livid.Chaturanga"
+            >
+              <i class="fab fa-google-play"></i> Download
+            </a>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="project-item-wrapper">
+          <div class="project-item">
+            <div class="thumb-container">
+              <!-- NOTE: All images used as thumbnails should be 16:10 aspect ratio -->
+              <img class="thumb-img" src="img/coinflip.jpg" alt="" />
+              <div class="thumb-overlay">
+                <div class="thumb-text">
+                  <img src="/img/java-logo.png" alt="" class="lang-icon" />
+                  <h3 class="title">Coin Flip Simulator</h3>
+                  <p class="lang">Developed with Java</p>
+                  <p class="desc">
+                    A rudimentary, text-based application that can simulate coin
+                    flips and keep a tally of the total heads and tails flipped.
+                    It is a very small and simple application I just threw
+                    together for fun.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a href="https://github.com/jacob-ressler/coin-flip-simulator">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+            <a
+              href="https://github.com/jacob-ressler/coin-flip-simulator/raw/master/_release-v1.0/Coin%20Flip%20Sim.jar"
+            >
+              <i class="fas fa-arrow-alt-circle-down"></i> Download
+            </a>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="project-item-wrapper">
+          <div class="project-item">
+            <div class="thumb-container">
+              <!-- NOTE: All images used as thumbnails should be 16:10 aspect ratio -->
+              <img class="thumb-img" src="img/buttonpress.jpeg" alt="" />
+              <div class="thumb-overlay">
+                <div class="thumb-text">
+                  <img src="/img/java-logo.png" alt="" class="lang-icon" />
+                  <h3 class="title">Press The Button</h3>
+                  <p class="lang">Developed with Java</p>
+                  <p class="desc">
+                    A simple game that tasks the player to press the on-screen
+                    button 10 times as quickly as possible. After each press the
+                    buttn will be relocated to a random position. After 10
+                    presses, the player's final time is displayed.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a href="https://github.com/jacob-ressler/press-the-button">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+            <a
+              href="https://github.com/jacob-ressler/press-the-button/raw/master/_release-v1.0/PressTheButton.jar"
+            >
+              <i class="fas fa-arrow-alt-circle-down"></i> Download
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT ME -->
+      <div id="contact" class="contact">
+        <h2 class="section-header">
+          <span class="secondary">Contact</span> Me...
+        </h2>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h4>You can also reach me via:</h4>
+            <div class="info-item">
+              <a href="mailto:jressler96@gmail.com">
+                <i class="fas fa-envelope"></i>jressler96@gmail.com</a
+              >
+            </div>
+            <div class="info-item">
+              <a href="https://www.linkedin.com/in/jacob-ressler/">
+                <i class="fab fa-linkedin"></i>LinkedIn</a
+              >
+            </div>
+          </div>
+
+          <!-- The contact form uses a free service called FormSpree to send form submissions to my email.
+            This way I don't have to worry about setting it up through my own PHP script(s) since implementing
+            all the needed spam, security, and validation checks would be very time-consuming... 
+						(though I probably will end up doing that eventually) -->
+          <form
+            action="https://formspree.io/jressler96@gmail.com"
+            method="POST"
+          >
+            <h4>Or send me an email right here!</h4>
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="John Doe"
+              required
+            />
+            <label for="email">Email Address</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="your@email.com"
+              required
+            />
+            <label for="msg">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              maxlength="1000"
+              placeholder="Your message here..."
+              required
+            ></textarea>
+            <input type="submit" value="SUBMIT" />
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
