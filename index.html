@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- My stylesheet and FontAwesome (for all the little icons I use) -->
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -17,11 +18,16 @@
 
   <body onload="startTimer()">
     <!-- POPUP SCRIPT -->
+    <!-- 
+      TODO: it's bad practice to store cookies without telling the user, so a request to do so
+      (or a popup to inform the user) should be added in the future. It could also serve as the trigger for
+      the startTimer() function rather than when the body loads. 
+    -->
     <script id="popup">
       function startTimer() {
         if (document.cookie != "") return;
         else {
-          // this is the first time this user has visited the page
+          // this is the first time this user has visited the page, so set a cookie
           let d = new Date();
           d.setTime(d.getTime() + 10 * 24 * 60 * 60 * 1000);
           document.cookie = "expires=" + d.toUTCString() + "path=/";
@@ -33,8 +39,11 @@
                 "Need to send me a message?\n" +
                   "Press OK to head to my contact form."
               )
-            )
-              location.href = location.origin + "#contact";
+            ) {
+              let newurl = location.href;
+              newurl = newurl.slice(0, newurl.indexOf("#"));
+              location.href = newurl + "#contact";
+            }
           }, 5000);
         }
       }
@@ -65,7 +74,12 @@
       <a href="" class="share-link" id="reddit-share" target="_blank">
         <i class="fab fa-reddit-alien"></i>
       </a>
-      <a href="" class="share-link" id="email-share" target="_blank">
+      <a
+        href="mailto:?Subject=Cool Personal Webpage&amp;Body=Check out this cool page I found: https://jacob-ressler.github.io/personal-page"
+        class="share-link"
+        id="email-share"
+        target=""
+      >
         <i class="fas fa-envelope"></i>
       </a>
     </div>
