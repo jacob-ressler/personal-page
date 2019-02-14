@@ -383,8 +383,8 @@ textarea:focus {
   }
 
   .share-bar a {
-    padding: 5px 0px 5px 15px;
-    font-size: 2rem;
+    padding: 0.2vh 0px 0.2vh 0.8vw;
+    font-size: 4vh;
     width: 100%;
   }
 }
