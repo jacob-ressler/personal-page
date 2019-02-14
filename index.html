@@ -8,7 +8,7 @@
       integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
       crossorigin="anonymous"
     />
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -16,22 +16,58 @@
   </head>
 
   <body onload="startTimer()">
-
-
+    <!-- POPUP SCRIPT -->
     <script id="popup">
       function startTimer() {
-        setTimeout(function() {
-          // code for popup here
-          if (confirm("Would you like to send me a message?"))
-            location.href = location.origin + '#contact';
-        }, 5000);
+        if (document.cookie != "") return;
+        else {
+          // this is the first time this user has visited the page
+          let d = new Date();
+          d.setTime(d.getTime() + 10 * 24 * 60 * 60 * 1000);
+          document.cookie = "expires=" + d.toUTCString() + "path=/";
+
+          setTimeout(function() {
+            // code for popup here
+            if (
+              confirm(
+                "Need to send me a message?\n" +
+                  "Press OK to head to my contact form."
+              )
+            )
+              location.href = location.origin + "#contact";
+          }, 5000);
+        }
       }
     </script>
-
 
     <!-- HERO IMAGE AND TEXT -->
     <div id="home" class="hero-image">
       <h1 class="hero-text">Lorem ipsum dolor sit amet.</h1>
+    </div>
+
+    <!-- SHARE SIDEBAR -->
+    <div class="share-bar">
+      <a class="share-icon">
+        <i class="fas fa-share"></i>
+      </a>
+      <a href="" class="share-link" id="facebook-share" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="" class="share-link" id="twitter-share" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="share-link" id="pinterest-share" target="_blank">
+        <i class="fab fa-pinterest"></i>
+      </a>
+      <a href="" class="share-link" id="linkedin-share" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="share-link" id="reddit-share" target="_blank">
+        <i class="fab fa-reddit-alien"></i>
+      </a>
+      <a href="" class="share-link" id="email-share" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </a>
     </div>
 
     <!-- NAVIGATION BAR -->
@@ -111,10 +147,10 @@
                   <h3 class="title">Coin Flip Simulator</h3>
                   <p class="lang">Developed with Java</p>
                   <p class="desc">
-                    A rudimentary, text-based JavaFX application that can
-                    simulate coin flips and keep a tally of the total heads and
-                    tails flipped. It is a very small and simple application I
-                    just threw together for fun.
+                    A rudimentary, text-based application that can simulate coin
+                    flips and keep a tally of the total heads and tails flipped.
+                    It is a very small and simple application I just threw
+                    together for fun.
                   </p>
                 </div>
               </div>
@@ -141,10 +177,10 @@
                   <h3 class="title">Press The Button</h3>
                   <p class="lang">Developed with Java</p>
                   <p class="desc">
-                    A simple JavaFX game that tasks the player to press the
-                    on-screen button 10 times as quickly as possible. After each
-                    press the buttn will be relocated to a random position.
-                    After 10 presses, the player's final time is displayed.
+                    A simple game that tasks the player to press the on-screen
+                    button 10 times as quickly as possible. After each press the
+                    buttn will be relocated to a random position. After 10
+                    presses, the player's final time is displayed.
                   </p>
                 </div>
               </div>
@@ -189,6 +225,7 @@
             action="https://formspree.io/jressler96@gmail.com"
             method="POST"
           >
+            <h4>Or send me an email right here!</h4>
             <label for="name">Name</label>
             <input
               type="text"
@@ -218,6 +255,5 @@
         </div>
       </div>
     </main>
-
   </body>
 </html>
