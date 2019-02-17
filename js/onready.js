@@ -15,7 +15,7 @@ function createShareLinks() {
 
   for (let i = 0; i < links.length; i++) {
     links[i].href = links[i].href.replace("{$}", shareurl);
-    //console.log(links[i].href);
+    console.log(links[i].href);
   }
 }
 
@@ -49,7 +49,7 @@ function getBaseURL() {
   let url = location.href;
 
   if (url.includes("#")) {
-    url = url.splice(0, indexOf("#"));
+    url = url.slice(0, url.indexOf("#"));
   }
 
   return url;
