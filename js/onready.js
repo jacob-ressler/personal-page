@@ -2,7 +2,8 @@
 
 $(document).ready(function() {
   createShareLinks();
-  startTimer(30);
+  showHeroText(2);
+  startPopupTimer(30);
 });
 
 // Updates the share links with the correct URL.
@@ -21,7 +22,7 @@ function createShareLinks() {
 
 // Displays a 'contact me' popup after 30 seconds.
 // Only happens for first-time visitors
-function startTimer(seconds) {
+function startPopupTimer(seconds) {
   // check for returning visitor
   if (document.cookie != "") return;
   else {
@@ -42,6 +43,17 @@ function startTimer(seconds) {
         location.href = newurl + "#contact";
       }
     }, seconds * 1000);
+  }
+}
+
+function showHeroText(seconds) {
+  let num = $(".hero-text span").length;
+  for (let i = 0; i < num; i++) {
+    setTimeout(function() {
+      $(".hero-text span")
+        .eq(i)
+        .animate({ opacity: "1" }, seconds * 1000);
+    }, 3 * (i + 0) * 1000);
   }
 }
 
