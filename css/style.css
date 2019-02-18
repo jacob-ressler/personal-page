@@ -338,10 +338,6 @@ textarea:focus {
 
 /* Mobile Landscape Mode */
 @media screen and (min-width: 640px) {
-  * {
-    transition: all 500ms ease;
-  }
-
   body {
     font-size: 24px;
   }
@@ -411,10 +407,6 @@ textarea:focus {
 
 /* Large screens and Desktop */
 @media screen and (min-width: 768px) {
-  * {
-    transition: all 500ms ease;
-  }
-
   body {
     font-size: 28px;
   }
@@ -472,10 +464,6 @@ textarea:focus {
 
 /* Large Desktop Screens */
 @media screen and (min-width: 1024px) {
-  * {
-    transition: all 500ms ease;
-  }
-
   .project-container .project-item-wrapper {
     padding: 10px;
   }
@@ -530,10 +518,6 @@ textarea:focus {
 /* Full HD and up */
 /* Large Desktop Screens */
 @media screen and (min-width: 1920px) {
-  * {
-    transition: all 500ms ease;
-  }
-
   body {
     font-size: 32px;
   }
