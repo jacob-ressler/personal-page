@@ -192,10 +192,6 @@ textarea {
   font-size: 0.8em;
 }
 
-.about-tab:hover {
-  background-color: inherit;
-}
-
 .about-content {
   color: white;
   display: none;
