@@ -146,7 +146,7 @@ textarea {
 }
 
 .navbar a {
-  font-size: 2vh;
+  font-size: 0.8em;
   text-transform: uppercase;
   border-bottom: 0.5vh var(--bglight) solid;
   height: auto;
