@@ -28,8 +28,9 @@ function startPopupTimer(seconds) {
   else {
     // this is the first time this user has visited the page, so set a cookie
     let d = new Date();
-    d.setTime(d.getTime() + seconds * 24 * 60 * 60 * 1000);
-    document.cookie = "expires=" + d.toUTCString() + "path=/";
+    d.setTime(d.getTime() + 200 * 24 * 60 * 60 * 1000); // cookie expires after 200 days
+    document.cookie =
+      "contact-request=;" + "expires=" + d.toUTCString() + ";" + "path=/";
 
     setTimeout(function() {
       // code for popup here
