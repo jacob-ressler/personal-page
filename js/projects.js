@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $(".project-container").hide();
-  $.getJSON("json/projects.json", function(data) {
+  $.getJSON("js/projects.json", function(data) {
     createProjectHeirarchy(data);
   });
 });
