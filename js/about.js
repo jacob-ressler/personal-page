@@ -1,3 +1,5 @@
+/* Handles tab switching in the 'About' section by modifying element classes */
+
 $(document).ready(function() {
   defaultAbout();
 });
@@ -21,7 +23,7 @@ function setContent(name, elmnt) {
   let oldactive = $(".active-tab");
   for (i = 0; i < oldactive.length; i++) {
     oldactive[i].className = oldactive[i].className.replace(" active-tab", "");
-    console.log(oldactive[i].className);
+    //console.log(oldactive[i].className);
   }
 
   let content = document.getElementById(name);
@@ -30,5 +32,5 @@ function setContent(name, elmnt) {
 
   elmnt.style.backgroundColor = color;
 
-  console.log(content.id);
+  //console.log(content.id);
 }

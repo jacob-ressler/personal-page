@@ -1,4 +1,4 @@
-// Dynamically create share links to the current page.
+/* Functions that need to run as soon as the page is loaded */
 
 $(document).ready(function() {
   createShareLinks();

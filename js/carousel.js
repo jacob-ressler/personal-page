@@ -1,3 +1,10 @@
+/* This carousel was taken from W3Schools 
+   (https://www.w3schools.com/howto/howto_js_slideshow.asp)
+   and modified to better fit my page and be modular in its usability.
+   It is able to support each 'About' tab having its own carousel
+   that functions independently of the others.
+*/
+
 var slideIndex = 1;
 $(document).ready(function() {
   showSlides(slideIndex);
@@ -17,7 +24,7 @@ function showSlides(n) {
   var i;
   var slides = $(".active-tab").find(".mySlides");
   var dots = $(".active-tab").find(".dot");
-  console.log(dots);
+  //console.log(dots);
   if (n > slides.length) {
     slideIndex = 1;
   }
