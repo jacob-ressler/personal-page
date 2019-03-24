@@ -28,7 +28,7 @@
       "url": "https://github.com/jacob-ressler/coin-flip-simulator"
     },
     "download": {
-      "url": "https://github.com/jacob-ressler/coin-flip-simulator/raw/master/_release-v1.0/Coin%20Flip%20Sim.jar",
+      "url": "https://github.com/jacob-ressler/coin-flip-simulator/raw/master/_releases/CoinFlipSim(v1.0).jar",
       "icon": "fas fa-arrow-alt-circle-down"
     }
   },
@@ -45,7 +45,41 @@
       "url": "https://github.com/jacob-ressler/press-the-button"
     },
     "download": {
-      "url": "https://github.com/jacob-ressler/press-the-button/raw/master/_release-v1.0/PressTheButton.jar",
+      "url": "https://github.com/jacob-ressler/press-the-button/raw/master/_releases/PressTheButton(v1.0).jar",
+      "icon": "fas fa-arrow-alt-circle-down"
+    }
+  },
+
+  {
+    "content": {
+      "imgsrc": "intersection.jpg",
+      "iconsrc": "java-logo.png",
+      "title": "Intersection Finder",
+      "lang": "Java",
+      "desc": "A simple application to test if two lines intersect. The user gives 4 points, 2 for the first line and 2 for the second. Their line equations are calculated and compared to see where they intersect, if at all."
+    },
+    "github": {
+      "url": "https://github.com/jacob-ressler/line-intersection-finder"
+    },
+    "download": {
+      "url": "https://github.com/jacob-ressler/line-intersection-finder/raw/master/_releases/LineIntersectionFinder(v1.0).jar",
+      "icon": "fas fa-arrow-alt-circle-down"
+    }
+  },
+
+  {
+    "content": {
+      "imgsrc": "trianglepoint.jpg",
+      "iconsrc": "java-logo.png",
+      "title": "Point In Triangle",
+      "lang": "Java",
+      "desc": "A simple application to test if a point is inside, on an edge of, or outside a triangle. The user gives 4 points, the first 3 for the triangle, the last as the point to be analyzed. The point's position relative to the triangle is calculated and reported."
+    },
+    "github": {
+      "url": "https://github.com/jacob-ressler/point-inside-triangle"
+    },
+    "download": {
+      "url": "https://github.com/jacob-ressler/point-inside-triangle/raw/master/_releases/PointInsideTriangle(v1.0).jar",
       "icon": "fas fa-arrow-alt-circle-down"
     }
   }
