@@ -49,6 +49,17 @@ textarea {
   -webkit-transition: none;
 }
 
+footer {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.footer-content {
+  font-size: 0.5em;
+  text-align: center;
+  padding: 1em;
+}
+
 .fa {
   font-family: "FontAwesome" !important;
 }
@@ -416,7 +427,8 @@ textarea:focus {
   padding-bottom: 4px;
 }
 
-.contact-container input[type="text"] {
+.contact-container input[type="text"],
+.contact-container input[type="email"] {
   width: 100%;
   margin-bottom: 1rem;
   padding: 5px;
