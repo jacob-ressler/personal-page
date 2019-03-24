@@ -15,7 +15,7 @@ function createProjectHeirarchy(data) {
       "<div class='project-item-wrapper'>" + // item wrapper
       "<div class='project-item'>" + // item container
       "<div class='thumb-container'>" + // thumbnail container
-      "<img class='thumb-img' src='img/" +
+      "<img class='thumb-img' src='img/projects/" +
       data[i].content.imgsrc +
       "' alt='' />" + // thumbnail image
       "<div class='thumb-overlay'>" + // thumbnail overlay container
