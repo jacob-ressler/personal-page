@@ -1,9 +1,8 @@
 # Jacob Ressler's Personal Page
 
-Use either of the links below to view my personal page:
+Use the link below to view my personal page:
 
 - https://jacob-ressler.github.io/personal-page/
-- http://eecs.csuohio.edu/~jaressle/personal-page/
 
 This is my first real web development project, so there is a fair bit of experimentation and (probably) unconventional code. Regardless, I think it came together well and am generally pleased with how it has turned out. I will continue to work on this interspersedly and as I see necessary.
 
